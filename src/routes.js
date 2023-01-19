@@ -1,30 +1,24 @@
 import {
     Route
 } from "react-router-dom";
-
-function Home() {
-    return <h2>Home</h2>;
-}
-
-function About() {
-    return <h2>About</h2>;
-}
+import Home from "./pages/Home";
+import CreateUser from "./pages/CreateUser";
 
 const pages = [
     {
-        path: '/',
-        component: Home
+        path: "/",
+        component: <Home />
     },
     {
-        path: '/create',
-        component: About
+        path: "/create",
+        component: <CreateUser/>
     }
 ]
 
 export const routes = pages.map((page, index) => {
+    console.log(page)
     return <Route
         key={'route' + index}
-        path={page.path}>
-        {page.component}
-    </Route>
+        path={page.path}
+        element={page.component} />
 });
