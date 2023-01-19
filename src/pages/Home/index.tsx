@@ -1,7 +1,7 @@
 import Modal from "antd/es/modal/Modal";
 import TableFamily from "components/Table/Family";
 import TableUserList from "components/Table/UserList";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Family } from "../../interfaces/UserList";
 
 const Home = () => {

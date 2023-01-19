@@ -1,6 +1,6 @@
 import { Button, Col, Row, Table, Typography } from "antd";
 import { ColumnsType } from "antd/es/table";
-import { Family, Relationship, relationshipOption, User } from "interfaces/UserList";
+import { Family, Relationship, relationshipOption } from "interfaces/UserList";
 import moment from 'moment';
 import { useMemo } from "react";
 import { DatePicker } from 'antd';
@@ -27,7 +27,7 @@ const TableFamily = ({ family, isReadonly = false, addNew, ...props }: Props) =>
             label: capitalizeFirstLetter(value)
         }))
 
-    }, [relationshipOption])
+    }, [])
 
     const handleChange = (index: number, value: string, field: keyof Family) => {
         props.handleChange && props.handleChange(index, value, field);

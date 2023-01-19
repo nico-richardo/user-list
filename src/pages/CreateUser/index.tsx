@@ -1,6 +1,6 @@
 import { Breadcrumb } from "antd";
 import FormNote from "components/Form/User";
-import { Family, InitialUser, User } from "../../interfaces/UserList";
+import { InitialUser, User } from "../../interfaces/UserList";
 import { HomeOutlined, UserOutlined } from '@ant-design/icons';
 
 import { useNavigate } from "react-router-dom";
